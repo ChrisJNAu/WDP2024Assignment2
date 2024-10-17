@@ -1,0 +1,143 @@
+:root {
+  --size: 33.3vw;
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.home-section {
+  position: relative;
+  background-image: url(../images/bg2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.custom-video {
+  max-width: auto;
+  height: auto;
+  background-color: rgba(1,1,1,0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%; /* Ensure the video covers the div */
+  min-height: 100%;
+  width: auto;
+  z-index: 1; /* Ensure video is behind content */
+  transform: translate(-50%, -50%); /* Center the video */
+  object-fit: cover;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.content {
+  padding: 10vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Anton', sans-serif;
+  background-image: linear-gradient(to right, brown, brown, yellow, white, yellow, brown, brown);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: brown;
+  padding: 9vw 2vw 0vw 2vw;
+  text-align: center;
+  font-size: 7vw;
+}
+
+.content p {
+  font-family: 'Monsterrat', sans-serif;
+  font-size: 2vw;
+  text-align: center;
+  color: white;
+}
+
+.same-size {
+  width: 100%;
+  height: 100%;
+}
+
+.inner-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  background-color: rgb(70, 26, 26);
+  font: normal 1.2vw arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  transition: visibility 0s, opacity 2s ease;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.textbox {
+  display: flex;
+  position: absolute;
+  margin: 6vw;
+  padding: 6vw;
+  border-style: ridge;
+  border-color: white;
+}
+
+.head h3 {
+  font-family: Anton, sans-serif;
+  font-size: 4vw;
+  color: #f8bd08;
+  text-shadow: 2px 2px 0px navy, 2px 2px, 4px, white;
+}
+
+.textbox p {
+  font-family: Lato, sans-serif;
+  color: white;
+  font-size: 1.5vw;
+}
+
+.relative-container:hover > .inner-text {
+  visibility: visible;
+  opacity: 0.9;
+  transition: 2s ease;
+}
+
+.hover-image {
+  height: var(--size);
+}

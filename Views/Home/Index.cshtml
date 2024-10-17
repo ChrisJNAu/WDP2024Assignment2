@@ -1,0 +1,112 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<article>
+
+    <section class="home-section">
+        <div class="row">
+            <div class="video-container col-12">
+                <video class="custom-video" autoplay="autoplay" muted loop preload="auto">
+                    <source src="~/videos/Video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="content col-12">
+                <h1>Generative Artificial Inteligence</h1>
+                <p>Generative artificial intelligence is artificial intelligence capable of generating
+                text, images, videos, or other data using generative models, often in response to
+                prompts. Generative AI models learn the patterns and structure of their input training
+                data and then generate new data that has similar characteristics.
+                <br><em>Wikipedia</em>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-section">
+        <div class="row fully-within-viewport"> 
+            <div class="textbox col-md-6 col-sm-12 col-12">
+                <h3>AI Chatbots</h3>
+                <p>Artificial intelligence (AI) chatbots are apps or interfaces that can carry on human-like conversation using natural language understanding (NLU) or natural language processing (NLP) and machine learning (ML).</p>
+                <a href="https://cloud.google.com/use-cases/ai-chatbots" target="_blank">Read More</a>
+            </div>
+            <div class="hover-image col-md-3 col-sm-6 col-12">
+                
+                    <img class="same-size" src="~/images/gemini.jpg" alt="Gemini" />
+                    <figcaption class="inner-text">Gemini, formerly known as Bard, is a generative artificial intelligence chatbot developed by Google.<br>Wikipedia</figcaption>
+            </div>
+            <div class="hover-image col-md-3 col-sm-6 col-12">
+                <div class="container">
+                    <img class="same-size" src="~/images/chatgpt.jpg" alt="ChatGPT" />
+                    <figcaption class="inner-text">ChatGPT is a chatbot and virtual assistant developed by OpenAI and launched on November 30, 2022.<br>Wikipedia</figcaption>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-section">
+        <div class="row fully-within-viewport"> 
+            <div class="hover-image col-md-3 col-sm-6 col-12">
+                <div class="container">
+                    <img class="same-size" src="~/images/pixlr.jpg" alt="Pixlr" />
+                    <figcaption class="inner-text">Pixlr is a group of AI-powered SaaS creative tools including Pixlr.com, Designs.ai andVectr.com. <br>Wikipedia</figcaption>
+                </div>
+            </div>
+            <div class="hover-image col-md-3 col-sm-6 col-12">
+                <div class="container">
+                    <img class="same-size" src="~/images/dalle.jpg" alt="DALL-E" />
+                    <figcaption class="inner-text">DALL·E, DALL·E 2, and DALL·E 3 are text-to-image models developed by OpenAI. <br>Wikipedia</figcaption>
+                </div>
+            </div>
+            <div class="textbox col-md-6 col-sm-12 col-12">
+                <h3>AI Image Generator</h3>
+                <p>AI Image Generator is an innovative tool using advanced AI techniques to generate image from a text prompt, just write what you want to generate and our AI will create it.</p>
+                <a href="https://pixlr.com/image-generator/" target="_blank" >Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-section">
+        <div class="row fully-within-viewport"> 
+            <div class="textbox col-md-6 col-sm-12 col-12">
+                <h3>AI Companies</h3>
+                <p>Top Generative AI Companies: Microsoft, OpenAI, Google, Amazon, Anthropic, IBM, Meta, xAI, Stability, and Adobe.</p>
+                <a href="https://www.vktr.com/ai-market/10-top-generative-ai-companies/" target="_blank">Read More</a>
+            </div>
+            <div class="hover-image col-md-3 col-sm-6 col-12">
+                <div class="container">
+                    <img class="same-size" src="~/images/ibm.jpg" alt="IBM" />
+                    <figcaption class="inner-text">IBM is the largest industrial research organization in the world, with 19 research facilities across a dozen countries.<br>Wikipedia</figcaption>
+                </div>
+            </div>
+            <div class="hover-image col-md-3 col-sm-6 col-12">
+                <div class="container">
+                    <img class="same-size" src="~/images/amazon.jpg" alt="Amazon" />
+                    <figcaption class="inner-text">The most capable generative AI–powered assistant for accelerating software development and leveraging companies' internal data. <br>Amazon Q</figcaption>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-section">
+        <div class="row fully-within-viewport"></div>"
+            <div class="head">
+                <h3>Upload AI images</h3>
+                @{
+                    if (!User.Identity.IsAuthenticated)
+                    {
+                        <p>Please</p><a href="~/Identity/Account/Login">Login</a><p>or</p><a href="~/Identity/Account/Register">Register</a><p>to upload your AI images.</p>
+                    }
+                    else
+                    {
+                        <a href="~/AIImages/Create" class="btn btn-primary">Click here to upload a new AI image</a>
+                    }
+                }
+            </div>
+        <div class="ai-images col-md-2 col-sm-4 col-6">
+
+        </div>
+    </section>
+</article>
+@* <script src="~/js/site.js"></script> *@
